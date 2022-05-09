@@ -8,11 +8,13 @@
 
 1. 点击仓库的右上⻆的`Settings`
 
-2. 点击下⾯的`Secret`
+2. 点击下⾯的`Secret`中`Actions`
 
 3. 点击右上⻆的`New repository Secret`，添加⼀个Secret
 
-Name必须为ACCOUNT，Value填⼊⾃⼰的浙⼤通⾏证账号，注意name和value的前后不要前后有多余空格。然后仿照上⾯的操作，再添加⼀个Name为PASSWORD，Value为浙⼤通⾏证密码的Secret，⾃动打卡脚本就配置完成了。
+Name必须为ACCOUNT，Value填⼊⾃⼰的浙⼤通⾏证账号，注意name和value的前后不要前后有多余空格。
+
+再添加⼀个Name为PASSWORD，Value为浙⼤通⾏证密码的Secret，⾃动打卡脚本就配置完成了。
 
 ## Step3. 开启github action
 
