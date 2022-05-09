@@ -26,6 +26,3 @@ python3 main.py
 
 Linux使用`crontab`
 
-Github使用Actions
-
-注意个人信息
