@@ -38,6 +38,7 @@ def doDaka(username, password):
         else:
             print(res['m'])
             message = res['m']
+            raise Exception
     except:
         print('数据提交失败')
         message = '数据提交失败'
