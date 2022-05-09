@@ -20,9 +20,9 @@
 
 3. 点击右上⻆的`New repository Secret`，添加⼀个Secret
 
-Name必须为ACCOUNT，Value填⼊⾃⼰的浙⼤通⾏证账号，注意name和value的前后不要前后有多余空格。
+`Name`必须为`ACCOUNT`，`Value`填⼊⾃⼰的浙⼤通⾏证账号，注意`name`和`value`的前后不要前后有多余空格。
 
-再添加⼀个Name为PASSWORD，Value为浙⼤通⾏证密码的Secret，⾃动打卡脚本就配置完成了。
+再添加⼀个`Name`为`PASSWORD`，`Value`为浙⼤通⾏证密码的Secret，⾃动打卡脚本就配置完成了。
 
 ## Step3. 开启github action
 
