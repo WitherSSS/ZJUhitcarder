@@ -12,7 +12,6 @@ import re
 import smtplib
 from email.mime.text import MIMEText
 
-mailto_list = ["***@***.com"]
 mail_host = "smtp.***.com"  # 设置服务器
 mail_user = "*****"  # 用户名
 mail_pass = "******"  # 口令
@@ -52,16 +51,15 @@ def doDaka(username, password):
 
 def send_mail(to_list, sub, content):  # to_list：收件人；sub：主题；content：邮件内容
     me = "< "+mail_user+"@"+mail_postfix+">"  
-    # 创建一个实例，这里设置为html格式邮件
     msg = MIMEText(content, _subtype='html', _charset='gb2312')
-    msg['Subject'] = sub  # 设置主题
+    msg['Subject'] = sub
     msg['From'] = me
     msg['To'] = ";".join(to_list)
     try:
         s = smtplib.SMTP()
-        s.connect(mail_host)  # 连接smtp服务器
-        s.login(mail_user, mail_pass)  # 登陆服务器
-        s.sendmail(me, to_list, msg.as_string())  # 发送邮件
+        s.connect(mail_host)
+        s.login(mail_user, mail_pass)
+        s.sendmail(me, to_list, msg.as_string())
         s.close()
         return True
     except Exception as e:
