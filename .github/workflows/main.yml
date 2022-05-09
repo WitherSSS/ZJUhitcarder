@@ -1,0 +1,38 @@
+name: ClockIn
+
+on:
+  push:
+    branches: 
+      - master
+  watch:
+    types: started
+  schedule:
+    - cron: 0 */8 * * *
+
+jobs:
+  ClockIn:
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install python3
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.8' 
+
+      - name: Install packages
+        run: |
+          pip3 install requests
+
+      - name: Random sleep
+        if: github.event_name == 'schedule'
+        run: sleep $(shuf -i 10-300 -n 1)
+
+      - name: Clock In
+        env:
+          ACCOUNT: ${{ secrets.ACCOUNT }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+        run: |
+          python3 main.py ${ACCOUNT} ${PASSWORD}
