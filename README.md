@@ -24,4 +24,7 @@ python3 main.py
 
 ## 自动运行
 
-使用`crontab`
+Linux使用`crontab`
+Github使用Actions
+
+注意个人信息
