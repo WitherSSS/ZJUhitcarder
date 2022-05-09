@@ -25,6 +25,7 @@ jobs:
       - name: Install packages
         run: |
           pip3 install requests
+          pip3 install -r requirements.txt
 
       - name: Random sleep
         if: github.event_name == 'schedule'
