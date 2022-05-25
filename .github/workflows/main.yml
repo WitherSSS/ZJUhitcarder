@@ -36,3 +36,10 @@ jobs:
           PASSWORD: ${{ secrets.PASSWORD }}
         run: |
           python3 main.py ${ACCOUNT} ${PASSWORD}
+
+      - name: Clock In LGH
+        env:
+          ACCOUNT: ${{ secrets.ACCOUNT_LGH }}
+          PASSWORD: ${{ secrets.PASSWORD_LGH }}
+        run: |
+          python3 main.py ${ACCOUNT} ${PASSWORD}
